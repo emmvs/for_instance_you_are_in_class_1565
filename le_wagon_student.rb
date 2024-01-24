@@ -1,11 +1,50 @@
-require "pry-byebug"
+# Object Oriented Class
+# Datatypes = Object
 
+# String
+# Integer
+# Float
+# Boolean (True & False)
+# Array
+# Hash
+# ...
+
+# Representation of real-life Objects
+# >> Datatypes that are out of the scope of the common ones
+
+# Book.new
+# Photo.new
+# Sign.new(
+#   video: "/video.mp3",
+#   language: "ger",
+#   notes: "This sign has two meanings")
+
+# class Book
+# end
+
+# book = Book.new
+# student = LeWagonStudent.new
+
+# p book
+# p student
+
+# Methods do things
+# Instances know things
+
+require "pry-byebug"
+# require_relative # to access your own code
+
+# snake_case🐍
+# CamelCase🐫
 class LeWagonStudent
   # Reader | Writer | Accessors
-  attr_accessor :name, :bootcamp, :reboot, :week
+  # attr_writer :password
+  attr_accessor :bootcamp, :week
+  attr_reader :name, :reboot
 
   # Data / state => instance variables
   def initialize(name, bootcamp, reboot = false, week = nil)
+    # Instance variable
     @name = name
     @bootcamp = bootcamp
     @reboot = reboot
@@ -24,7 +63,7 @@ class LeWagonStudent
   end
 
   def set_week(week)
-    @week = week if week.between?(1, 9)
+    @week = week # if week.between?(1, 9)
   end
 end
 
